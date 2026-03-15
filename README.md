@@ -1,6 +1,13 @@
 # Task Management Dashboard
 
-A responsive **Task Management Dashboard** built with **React 19**, **TypeScript**, and **Material UI**. Features full **CRUD operations**, real-time search with debounce, advanced multi-select filtering by status & priority, filter persistence across sessions, dual **List / Grid** view modes with virtualized rendering, **Dark / Light** theme toggle, stat summary cards, overdue task detection, localStorage persistence, and a personalized landing page — fully client-side, no backend required.
+  - A **Task Management Dashboard** where you can **add, edit, delete, and track** your tasks —
+built with **React 19**, **TypeScript**, and **Material UI**.
+
+  - Each task has a **title**, **description**, **status** (`Todo` / `In Progress` / `Completed`), **priority** (`Low` / `Medium` / `High`), and a **due date**.
+
+  - You can **search tasks in real time**, **filter by status or priority**, switch between **List and Grid view**, and toggle **Dark / Light theme**.
+
+  - All your tasks and filters are **automatically saved in the browser** — no backend or database required.
 
 ---
 
