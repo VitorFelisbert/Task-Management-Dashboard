@@ -137,18 +137,18 @@ Each task card displays:
 
 ## Tech Stack
 
-| Category | Technology | Version |
-|---|---|---|
-| Framework | React + TypeScript | 19.x / 5.9.x |
-| Build Tool | Vite | 7.x |
-| UI Library | Material UI (MUI) | 7.x |
-| State Management | Zustand (with persist) | 5.x |
-| Routing | React Router DOM | 7.x |
-| Forms | react-hook-form + Yup | 7.x / 1.x |
-| Date Handling | Day.js + MUI X Date Pickers | 1.x / 7.x |
-| Virtualized List | react-window | 1.x |
-| Linting | ESLint + plugins | 8.x |
-| Formatting | Prettier | 3.x |
+| Category | Technology |
+|---|---|
+| Framework | React + TypeScript |
+| Build Tool | Vite |
+| UI Library | Material UI (MUI) |
+| State Management | Zustand (with persist) |
+| Routing | React Router DOM |
+| Forms | react-hook-form + Yup |
+| Date Handling | Day.js + MUI X Date Pickers |
+| Virtualized List | react-window |
+| Linting | ESLint + plugins |
+| Formatting | Prettier |
 
 ---
 
